@@ -8,6 +8,7 @@
   ],
   "main": "./dist/houston.umd.js",
   "module": "./dist/houston.es.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/houston.es.js",
