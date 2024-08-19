@@ -49,7 +49,7 @@ ci-dependencies: ## Install dependencies required by the library in CI
 	yarn install --frozen-lockfile
 
 .PHONY: build
-build-app: ## Build the library
+build: ## Build the library
 	yarn build
 
 .PHONY: ci-test
