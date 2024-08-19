@@ -1,6 +1,6 @@
 {
   "name": "@mirego/houston",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Houston gives you a Task primitive to better handle async actions cancelation and concurrency",
   "type": "module",
   "files": [
