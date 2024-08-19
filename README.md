@@ -6,7 +6,7 @@
   </p>
 
 <a href="https://github.com/mirego/houston/actions/workflows/ci.yaml"><img src="https://github.com/mirego/houston/actions/workflows/ci.yaml/badge.svg?branch=main" /></a>
-<a href="https://github.com/mirego/houston/tags"><img src="https://img.shields.io/npm/v/houston.svg"></a><br /><br />
+<a href="https://github.com/mirego/houston/tags"><img src="https://img.shields.io/npm/v/@mirego/houston.svg"></a><br /><br />
 
 </div>
 
