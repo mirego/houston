@@ -40,13 +40,13 @@ As we’ve established before, TaskInstances a promise-like and they can be canc
 With npm:
 
 ```sh
-npm install houston
+npm install @mirego/houston
 ```
 
 With Yarn:
 
 ```sh
-yarn add houston
+yarn add @mirego/houston
 ```
 
 ## Usage
@@ -54,7 +54,7 @@ yarn add houston
 ### Defining a task
 
 ```ts
-import { task } from 'houston';
+import { task } from '@mirego/houston';
 
 const helloTask = task<[firstName: string, lastName: string], string>(
   function* (firstName, lastName) {
@@ -72,7 +72,7 @@ const helloTask = task<[firstName: string, lastName: string], string>(
 ### Canceling a task
 
 ```ts
-import { task } from 'houston';
+import { task } from '@mirego/houston';
 
 const helloTask = task<[firstName: string, lastName: string], string>(
   function* (firstName, lastName) {
@@ -110,7 +110,7 @@ The drop modifier drops tasks that are `.perform()`ed while another is already r
 Example use case: submitting a form and dropping other submissions if there’s already one running.
 
 ```ts
-import { task } from 'houston';
+import { task } from '@mirego/houston';
 
 const submitFormTask = task<[data: string]>({ drop: true }, function* (data) {
   yield fetch(someURL, { method: 'post', body: data });
@@ -131,7 +131,7 @@ The _restartable_ modifier ensures that only one instance of a task is running b
 Example use case: debouncing an action. Paired with the `timeout` yieldable, a restartable task acts as a debounced function with async capabilities!
 
 ```ts
-import { task, timeout } from 'houston';
+import { task, timeout } from '@mirego/houston';
 
 const debounceAutocompleteTask = task<[query: string]>(
   { restartable: true },
@@ -157,7 +157,7 @@ The _enqueue_ modifier ensures that only one instance of a task is running by ma
 Example use case: sending analytics
 
 ```ts
-import { task, timeout } from 'houston';
+import { task, timeout } from '@mirego/houston';
 
 const sendAnalyticsTask = task<[event: AnalyticsEvent]>(
   { enqueue: true },
@@ -179,7 +179,7 @@ The _keepLatest_ will drop all but the most recent intermediate `.perform()`, wh
 Example use case: you poll the server in a loop, but during the server request, you get some other indication (say, via websockets) that the data is stale and you need to query the server again when the initial request completed.
 
 ```ts
-import { task, timeout } from 'houston';
+import { task, timeout } from '@mirego/houston';
 
 const pollServerTask = task({ keepLatest: true }, function* () {
   const response = yield fetch(someURL);
