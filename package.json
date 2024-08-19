@@ -21,6 +21,9 @@
     "prepublishOnly": "yarn build"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.9.0",
     "@types/react": "^18.3.3",
     "@typescript-eslint/eslint-plugin": "^8.1.0",
     "@typescript-eslint/parser": "^8.1.0",
