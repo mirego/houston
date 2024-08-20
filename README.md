@@ -51,6 +51,8 @@ yarn add @mirego/houston
 
 ## Usage
 
+**You can find the [full documentation here](https://github.com/mirego/houston/wiki)**
+
 ### Defining a task
 
 ```ts
